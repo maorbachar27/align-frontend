@@ -1,0 +1,15 @@
+<div class="imageSlider__container">
+  <img class="leftArrow arrow" (click)="onPrev.emit()" src="assets/arrow.png" />
+  <span class="previewImages_container">
+    <img
+      *ngFor="let img of images | async | slice: 1:4"
+      (click)="onSelectImage.emit(img)"
+      src="{{ 'https://picsum.photos/id/' + img.id + '/150/150' }}"
+    />
+  </span>
+  <img
+    class="rightArrow arrow"
+    (click)="onNext.emit()"
+    src="assets/arrow.png"
+  />
+</div>

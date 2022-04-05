@@ -1,0 +1,7 @@
+<div class="imageUpperView__container">
+  <img
+    *ngIf="selectedImage"
+    src="{{ 'https://picsum.photos/id/' + selectedImage.id + '/400/400' }}"
+  />
+  <div class="author">{{ selectedImage?.author }}</div>
+</div>
