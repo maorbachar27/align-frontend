@@ -14,7 +14,7 @@ import { HttpService } from './services/http.service';
 export class AppComponent {
   title = 'align';
   selectedImage: ImageModel;
-  pagination: { page: number; limit: number } = { page: 1, limit: 4 };
+  pagination: { page: number; limit: number } = { page: 1, limit: 5 };
   limit: number = 4;
 
   timerSubscription: Subscription;

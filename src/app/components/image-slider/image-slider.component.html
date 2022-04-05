@@ -2,7 +2,7 @@
   <img class="leftArrow arrow" (click)="onPrev.emit()" src="assets/arrow.png" />
   <span class="previewImages_container">
     <img
-      *ngFor="let img of images | async | slice: 1:4"
+      *ngFor="let img of images | async"
       (click)="onSelectImage.emit(img)"
       src="{{ 'https://picsum.photos/id/' + img.id + '/150/150' }}"
     />

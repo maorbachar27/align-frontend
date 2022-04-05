@@ -25,9 +25,11 @@ export class ImageSliderComponent implements OnInit {
   constructor() {}
 
   ngOnChanges(changes: SimpleChanges) {
-    this.images.pipe(first()).subscribe((data) => {
-      this.onSelectImage.emit(data[0]);
-    });
+    if (this.images) {
+      this.images.pipe(first()).subscribe((data) => {
+        this.onSelectImage.emit(data[2]);
+      });
+    }
   }
 
   ngOnInit(): void {}
