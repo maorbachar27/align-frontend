@@ -15,7 +15,6 @@ export class AppComponent {
   title = 'align';
   selectedImage: ImageModel;
   pagination: { page: number; limit: number } = { page: 1, limit: 5 };
-  limit: number = 4;
 
   timerSubscription: Subscription;
   imagesObservable: Observable<ImageModel[]>;
